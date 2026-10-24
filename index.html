@@ -15,20 +15,20 @@
     <!-- <link rel="shortcut icon" href="./pictures/logo.png"> -->
     <!-- icons -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <!-- <style type="text/tailwindcss">
+    <style type="text/tailwindcss">
       @theme {
-        --color-clifford: #da373d;
+        --color-navy: #012a5b;
       }
-    </style> -->
+    </style>
     <style>
-      *{
+      body {
         font-family: "Geist", sans-serif;
       }
     </style>
   </head>
-  <body class="min-h-screen max-w-md bg-base-200 mx-auto">
-    <header class="border-b-2 border-gray-300 bg-slate-50 sticky top-0 bg-base-200 z-10">
-        <div class="mx-auto w-full max-w-5xl px-4 py-6">
+  <body class="min-h-screen bg-base-200 mx-auto">
+    <header class="border-b-2 border-gray-300 sticky top-0 bg-base-200 z-10">
+        <div class="mx-auto w-full max-w-[1110px] px-4 py-6">
             <h1 class="text-[32px] font-bold text-navy">Job Application Tracker</h1>
         </div>
     </header>
@@ -65,18 +65,20 @@
                 <button class="tab-btn btn btn-sm border-slate-200 bg-white text-xs font-normal normal-case text-slate-600" data-tab="rejected">Rejected</button>
             </div>
 
+            <!-- empty box -->
             <div id="jobs-container" class="flex flex-col gap-4"></div>
 
-        
-        <div id="empty-state" class="hidden">
-            <div class="card min-h-100 items-center justify-center border border-slate-200 bg-white px-4 text-center">
-                <img src="./pictures/assignment_7959593 1.png" alt="">
-                <h3 class="mt-5 text-2xl font-bold text-navy">No jobs available</h3>
-                <p class="mt-1 text-slate-500">Check back soon for new job opportunities</p>
+            <!-- tracker-info -->
+            <div id="empty-state" class="hidden">
+                <div class="card min-h-100 items-center justify-center border border-slate-200 bg-white px-4 text-center">
+                    <img src="./pictures/assignment_7959593 1.png" alt="" class="w-16">
+                    <h3 class="mt-5 text-2xl font-bold text-navy">No jobs available</h3>
+                    <p class="mt-1 text-slate-500">Check back soon for new job opportunities</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
+    <!-- javascript file -->
     <script src="script.js"></script>
   </body>
 </html>

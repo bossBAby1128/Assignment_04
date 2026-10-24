@@ -25,18 +25,18 @@ const buttonClassMap = {
 
 const activeTabClasses = ["!bg-blue-500", "!border-blue-500", "!text-white", "font-semibold"];
 
-const trashIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2m-9 0 1 14h8l1-14"/></svg>`;
+const trashIcon = `<i class="fa-solid fa-trash"></i>`;
 
 let activeTab = "all";
 
-// ---------- common helpers ----------
+//  common function for repeated codes
 const getElement = (elementId) => document.getElementById(elementId);
 const setText = (elementId, value) => { getElement(elementId).textContent = value; };
 const getJobsByStatus = (status) => jobList.filter((job) => job.status === status);
 const getVisibleJobs = () => (activeTab === "all" ? jobList : getJobsByStatus(activeTab));
 const formatJobCount = (count) => `${count} ${count === 1 ? "job" : "jobs"}`;
 
-// One function for both Interview and Rejected buttons
+// common function for both Interview and Rejected buttons
 const updateJobStatus = (jobId, newStatus) => {
   const selectedJob = jobList.find((job) => job.id === jobId);
   selectedJob.status = newStatus;
@@ -49,7 +49,7 @@ const deleteJob = (jobId) => {
   renderAll();
 };
 
-// One function builds both action buttons
+// common function for action buttons
 const createStatusButton = (job, status) => {
   const activeClass = job.status === status ? "btn-active" : "";
   return `<button class="btn btn-sm btn-outline ${buttonClassMap[status]} ${activeClass} uppercase"
@@ -73,7 +73,7 @@ const createJobCard = (job) => `
     </div>
   </article>`;
 
-// ---------- rendering ----------
+// rendering section
 const renderDashboard = () => {
   setText("total-count", jobList.length);
   setText("interview-count", getJobsByStatus("interview").length);
@@ -98,7 +98,7 @@ const renderAll = () => {
   renderJobs();
 };
 
-// ---------- events ----------
+// events section
 getElement("jobs-container").addEventListener("click", (event) => {
   const clickedButton = event.target.closest("button[data-action]");
   if (!clickedButton) return;
