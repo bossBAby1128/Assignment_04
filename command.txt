@@ -5,3 +5,10 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/bossBAby1128/Assignment_04.git
 git push -u origin main
+
+//Answer to the questions
+What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+2. How do you create and insert a new element into the DOM?
+3. What is Event Bubbling? And how does it work?
+4. What is Event Delegation in JavaScript? Why is it useful?
+5. What is the difference between preventDefault() and stopPropagation() methods?
