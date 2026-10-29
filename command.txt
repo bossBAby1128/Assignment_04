@@ -7,8 +7,22 @@ git remote add origin https://github.com/bossBAby1128/Assignment_04.git
 git push -u origin main
 
 //Answer to the questions
-What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+
+1.What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+
+Answer:this methods target id type & return outputs type are given here:
+a/getElementById(Single ID,return:Single element)
+b/getElementsByClassName(class Name,return:all html output)
+c/querySelector(css selector,return:first matched element)
+d/querySelectorAll(css selector)
+
 2. How do you create and insert a new element into the DOM?
+Answer:const newDiv = document.createElement('div');
+const parentElement = document.querySelector('.container');
+parentElement.append(newDiv); 
 3. What is Event Bubbling? And how does it work?
+Answer:a process that triggered an event on other HTML element automatically upward through parent elements.
+
 4. What is Event Delegation in JavaScript? Why is it useful?
+Answer:
 5. What is the difference between preventDefault() and stopPropagation() methods?
