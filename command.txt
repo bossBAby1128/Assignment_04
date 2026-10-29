@@ -24,5 +24,8 @@ parentElement.append(newDiv);
 Answer:a process that triggered an event on other HTML element automatically upward through parent elements.
 
 4. What is Event Delegation in JavaScript? Why is it useful?
-Answer:
+Answer:a technique for add a single event listener to a parent element to retrieve events from multiple child elements.
 5. What is the difference between preventDefault() and stopPropagation() methods?
+Answer:
+preventDefault(): prevents the browser's default action for an event.
+stopPropagation(): prevents the event from propagating to other elements.
